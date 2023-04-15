@@ -9,7 +9,7 @@ import time
 
 parameters = {
     "cx" : "c6e3001bf986f4943",
-    "exactTerms" : "ion beam accelerator",
+    "exactTerms" : "high energy physics particle accelerator",
     "start" : "1"
 
 }
@@ -39,7 +39,7 @@ for i in range(1,100,10):
         #print(lay1[i]["title"]) 
 
     fields = ['title', 'link', "snippet"] 
-    fileName = 'output_csv/ion_beam_accelerator.csv'
+    fileName = 'output_csv/high_energy_physics_particle_accelerator.csv'
 
     #writing to csv file ignoring keys not appearing in fields
     with open(fileName, mode = 'a', newline='', encoding='utf-8') as accelerator_review:
