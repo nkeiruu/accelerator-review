@@ -4,13 +4,11 @@ import csv
 import time
 
 #parameters to pass into Google Custom Search JSON API
-
-
-
 parameters = {
     "cx" : "c6e3001bf986f4943",
-    "exactTerms" : "high energy physics particle accelerator",
-    "start" : "1"
+    "exactTerms" : "particle",
+    "start" : "1",
+    "num" : "10"
 
 }
 
@@ -32,6 +30,10 @@ for i in range(1,100,10):
 
     #Subdictionary with relevant terms
     lay1 = search_dict["items"]
+    key2 = search_dict["searchInformation"]["totalResults"]
+    #print(key2)
+    #if key2 == '0':
+     #   continue
 
     #accessing the required info in the search Response object
     #i.e. title 
@@ -39,7 +41,7 @@ for i in range(1,100,10):
         #print(lay1[i]["title"]) 
 
     fields = ['title', 'link', "snippet"] 
-    fileName = 'output_csv/high_energy_physics_particle_accelerator.csv'
+    fileName = 'output_csv/testy.csv'
 
     #writing to csv file ignoring keys not appearing in fields
     with open(fileName, mode = 'a', newline='', encoding='utf-8') as accelerator_review:
